@@ -1,38 +1,714 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(240, 237, 234);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NAV-BAR */
+.nav-bar {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.background-image {
+  background-image: url("../src/asset/borrow-background.jpg");
+  height: 40em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(65%);
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list {
+  list-style: none;
+  font-size: 20px;
+  margin-right: 40px;
+}
+#home-key {
+  background-color: rgb(161, 38, 38);
+  padding: 2px 10px;
+  color: #fff;
+  list-style: none;
+  font-size: 20px;
+  margin-right: 40px;
+}
+.nav-list:hover {
+  color: black;
+  font-weight: 540;
+  text-shadow: 1px 2px 2px rgba(138, 4, 4, 0.623);
+}
+
+/* FRONT-PAGE */
+.first-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 130px;
+}
+
+.header-1 h1 {
+  font-size: 55px;
+  font-family: "Raleway", sans-serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-1 h3 {
+  font-size: 38px;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1,
+h3 {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.help-butts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro {
+  width: 670px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.lend-button {
+  margin-right: 15px;
+  background-color: brown;
+  border: 1px solid brown;
+}
+
+.tools-button {
+  background: none;
+  border: 1px solid white;
+}
+.help-butts button {
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: 20px;
+  color: white;
+}
+
+.tools-button:hover {
+  background-color: brown;
+}
+
+/* REVIEW SECTION */
+.customer-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.Shouib-comment {
+  font-size: 18px;
+  text-align: center;
+}
+.content {
+  margin: 190px 30px 50px;
+  padding: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left-content {
+  width: 40%;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.right-content {
+  background-color: white;
+  font-size: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.right-heading {
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.earn-button {
+  width: 95%;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(15, 15, 51);
+  border: 1px solid rgb(15, 15, 51);
+  border-radius: 5px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* TOOLS-SECTION */
+#tools-archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+  padding-right: 15;
+}
+
+.available-tools {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.available-tools span {
+  margin: 10px 0;
+}
+
+.price {
+  background-color: rgb(189, 98, 98);
+  width: 100%;
+  text-align: center;
+}
+
+.prize-1:hover {
+  background-color: rgb(66, 62, 62);
+}
+
+/* FOOTER */
+.footer {
+  background-color: rgb(6, 6, 36);
+  color: white;
+}
+.company-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+.top {
+  list-style: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.li-bottom {
+  list-style: none;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.rRight {
+  display: flex;
+  justify-content: center;
+}
+
+.ref {
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* MEDIA-QUERY (PHONES) */
+
+@media screen and (max-width: 550px) {
+  .nav-bar {
+    height: 140px;
   }
-  to {
-    transform: rotate(360deg);
+  .first-page {
+    margin-top: 190px;
+  }
+  .background-image {
+    height: 45em;
+  }
+  .help-butts {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .help-butts button {
+    margin-top: 30px;
+  }
+  .company-info {
+    flex-direction: column;
+  }
+
+  .right-heading {
+    font-size: 26px;
+  }
+  .Shouib-comment,
+  p {
+    font-size: 18px;
+  }
+
+  .right-content {
+    width: 90%;
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+
+  .left-content {
+    width: 90%;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0;
+  }
+  .earn-button {
+    padding: 20px 10px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 100px 0 60px 0;
+    padding: 30px;
+  }
+
+  .tools-archive {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .available-tools {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .available-tools span {
+    color: black;
+    font-size: 22px;
+  }
+
+  .available-tools img {
+    width: 100%;
+  }
+
+  .price {
+    color: white;
+    width: 100%;
+    font-size: 22px;
+    margin: 20px 0 0;
+  }
+
+  .container.nav-bar,
+  .list {
+    flex-direction: column;
+    height: 120px;
+  }
+
+  .header-1 h1,
+  h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .details,
+  .intro {
+    width: 99%;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* MEDIA QUERRY(IPADs) */
+
+@media screen and (max-width: 850px) and (min-width: 560px) {
+  h1,
+  h3 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .intro {
+    font-size: 25px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  button {
+    font-size: 30px;
+  }
+
+  .content {
+    padding: 30px 0;
+    margin-top: 150px;
+  }
+
+  .available-tools {
+    margin: 0;
+  }
+  .tools-archive {
+    padding: 0;
+  }
+  .earn-button {
+    padding: 20px;
+  }
+}
+
+/* CONTACT-US SECTION */
+.link-style {
+  text-decoration: none;
+}
+
+.contact-container {
+  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-us {
+  background-color: whitesmoke;
+  width: 35%;
+  padding: 20px;
+}
+
+.contact-container .contact-header {
+  text-align: center;
+}
+
+.contactUs-h4 {
+  font-size: 30px;
+  margin: 0;
+  color: rgb(219, 124, 90);
+  font-family: Verdana;
+}
+.contactUs-p {
+  font-size: 15px;
+  color: grey;
+}
+
+.info input {
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+
+  outline: none;
+}
+
+#contact-msg {
+  width: 100%;
+  height: 90px;
+  outline: none;
+}
+.submit {
+  background-color: rgb(219, 124, 90);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 15px;
+  padding: 7px;
+  margin: 20px 0;
+}
+
+/* REQUEST-TABLE SECTION */
+.request-container {
+  margin: 100px 0;
+  padding-left: 20px;
+}
+
+.request-tab {
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 16px;
+  
+}
+
+.table-header th {
+  padding: 7px 50px;
+  background-color: rgb(240, 162, 18);
+}
+.request-row td {
+  padding: 10px 15px;
+}
+
+.request-row:nth-child(odd) {
+  background-color: rgb(177, 169, 169);
+}
+
+.request-row td:nth-child(4) {
+  background-color: rgb(240, 162, 18);
+  border: 1px solid white;
+}
+
+.request-row td:nth-child(5) {
+  font-weight: bolder;
+}
+
+/* NEW-REQUEST INPUT SECTION */
+.new-request {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.request-h2 {
+  margin-bottom: 10px;
+}
+
+.newRequest-input {
+  background-color: white;
+  padding: 20px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-input {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-input label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.new-input .input-box {
+  width: 70%;
+  padding: 10px;
+}
+
+.borrow-label {
+  margin-right: 20px;
+}
+.location-label {
+  margin-right: 60px;
+}
+.days-label {
+  margin-right: 10px;
+}
+.date-label {
+  margin-right: 32px;
+}
+
+#newRequest-p {
+  font-size: 17px;
+}
+
+.request-button {
+  align-self: center;
+  margin: 10px 0;
+}
+.request-button #submit-but {
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background-color: brown;
+  color: white;
+}
+
+/* SIGN-UP SECTION */
+.signup-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.sign-up {
+
+  background-color: white;
+  width: 45%;
+  padding: 30px;
+}
+
+.sign-up h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sign-up label {
+  display: block;
+  margin-bottom: 10px;
+}
+.signup-input input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+}
+.signup-button button {
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: brown;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.signup-button button:hover {
+  background-color: rgb(184, 115, 13);
+}
+.signup-p p {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* SIGN IN SECTION */
+
+.signin-container {
+  margin-top: 120px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signin-info {
+  background-color: white;
+  width: 30%;
+  padding: 30px;
+}
+
+.signin-info h3 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 19px;
+}
+.signin-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(173, 199, 173);
+}
+
+.signin-input label {
+  display: block;
+  margin: 15px 0;
+}
+
+.signin-clicks button {
+  width: 100%;
+  padding: 10px;
+  margin: 40px 0 20px 0;
+  background-color: brown;
+  border: none;
+  border-radius: 4px;
+}
+
+.signin-clicks button:hover {
+  background-color: rgb(134, 101, 58);
+}
+
+.signin-clicks p {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* MediaQuerry phones */
+@media screen and (max-width: 550px) {
+  .newRequest-input {
+    width: 100%;
+  }
+  .request-row td,
+  th {
+    width: 10px;
+    padding: 5px;
+  }
+
+  .borrow-label {
+    margin-top: 20px;
+  }
+
+  .contact-us {
+    width: 100%;
+    font-size: 30px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .sign-up {
+    width: 100%;
+    margin-top: 100px;
+    font-size: 20px;
+  }
+
+  .signin-container {
+    margin-top: 160px;
+  }
+  .signin-info {
+    width: 100%;
+  }
+}
+
+/* Mediaquerry ipad */
+@media screen and (max-width: 850px) {
+  .newRequest-input {
+    width: 100%;
+  }
+  .borrow-label {
+    margin-top: 20px;
+  }
+  .contact-us {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sign-up {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .signin-info {
+    width: 100%;
+    font-size: 30px;
+  }
+  .signin-input input {
+    padding: 25px;
   }
 }
